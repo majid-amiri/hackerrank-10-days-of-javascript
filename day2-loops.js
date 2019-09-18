@@ -26,11 +26,11 @@ function readLine() {
  * Complete the vowelsAndConsonants function.
  * Print your output using 'console.log()'.
  */
-const VOWELS = /[auioe]$/
+const VOWELS = { a: 'a', e: 'e', i: 'i', o: 'o', u: 'u' }
 function vowelsAndConsonants(s) {
     for(let i = 0; i < s.length; i++){
-        const char = s.charAt(i)
-        if(VOWELS.test(char))
+        const char = s[i]
+        if(VOWELS[char])
             console.log(char)
         else
             setTimeout(() => console.log(char), 0)
